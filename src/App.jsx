@@ -91,7 +91,7 @@ useEffect(() => {
 
         try {
             const response = await fetch(
-                'http://localhost:5000/api/profile',
+                'http://https://skilllink-w4n4.onrender.com/api/profile',
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -125,7 +125,7 @@ useEffect(() => {
   const fetchFeaturedServices = async () => {
     try {
       const response = await fetch(
-        'http://localhost:5000/api/services'
+        'http://https://skilllink-w4n4.onrender.com/api/services'
       );
 
       const data = await response.json();
@@ -246,8 +246,8 @@ if (currentUser) {
 
   try {
     const endpoint = authMode === 'register'
-      ? 'http://localhost:5000/api/auth/register'
-      : 'http://localhost:5000/api/auth/login';
+      ? 'http://https://skilllink-w4n4.onrender.com/api/auth/register'
+      : 'http://https://skilllink-w4n4.onrender.com/api/auth/login';
 
     const requestData = authMode === 'register'
       ? { fullName, email, password, role: userType }

@@ -103,7 +103,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       setLoadingRequests(true);
 
       const response = await fetch(
-        'http://localhost:5000/api/requests/my-requests',
+        'http://https://skilllink-w4n4.onrender.com/api/requests/my-requests',
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -135,7 +135,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/messages/${request._id}`,
+      `http://https://skilllink-w4n4.onrender.com/api/messages/${request._id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -152,7 +152,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
     setConversationMessages(data.messages || data);
 
     await fetch(
-      `http://localhost:5000/api/messages/${request._id}/read`,
+      `http://https://skilllink-w4n4.onrender.com/api/messages/${request._id}/read`,
       {
         method: 'PATCH',
         headers: {
@@ -178,7 +178,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/messages/${activeConversation._id}`,
+      `http://https://skilllink-w4n4.onrender.com/api/messages/${activeConversation._id}`,
       {
         method: 'POST',
         headers: {
@@ -236,7 +236,7 @@ const acceptedJobs = jobRequests.filter(
       setLoadingJobs(true);
 
       const response = await fetch(
-        'http://localhost:5000/api/requests/job-requests',
+        'http://https://skilllink-w4n4.onrender.com/api/requests/job-requests',
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -267,7 +267,7 @@ const acceptedJobs = jobRequests.filter(
       console.log('Fetching reviews for provider:', providerId);
 
       const response = await fetch(
-        `http://localhost:5000/api/reviews/provider/${providerId}`,
+        `http://https://skilllink-w4n4.onrender.com/api/reviews/provider/${providerId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -295,7 +295,7 @@ const acceptedJobs = jobRequests.filter(
         setLoadingNotifications(true);
 
         const response = await fetch(
-            'http://localhost:5000/api/notifications',
+            'http://https://skilllink-w4n4.onrender.com/api/notifications',
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -321,7 +321,7 @@ const acceptedJobs = jobRequests.filter(
 const markNotificationAsRead = async (notificationId) => {
     try {
         const response = await fetch(
-            `http://localhost:5000/api/notifications/${notificationId}/read`,
+            `http://https://skilllink-w4n4.onrender.com/api/notifications/${notificationId}/read`,
             {
                 method: 'PATCH',
                 headers: {
@@ -349,7 +349,7 @@ const markNotificationAsRead = async (notificationId) => {
 const markAllNotificationsAsRead = async () => {
     try {
         const response = await fetch(
-            'http://localhost:5000/api/notifications/read-all',
+            'http://https://skilllink-w4n4.onrender.com/api/notifications/read-all',
             {
                 method: 'PATCH',
                 headers: {
@@ -389,7 +389,7 @@ useEffect(() => {
     try {
       setLoadingProfile(true);
 
-      const response = await fetch('http://localhost:5000/api/profile', {
+      const response = await fetch('http://https://skilllink-w4n4.onrender.com/api/profile', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -437,7 +437,7 @@ useEffect(() => {
         }
 
         const response = await fetch(
-            'http://localhost:5000/api/profile',
+            'http://https://skilllink-w4n4.onrender.com/api/profile',
             {
                 method: 'PUT',
                 headers: {
@@ -474,7 +474,7 @@ console.log('Profile response data:', data);
         setLoadingServices(true);
 
         const response = await fetch(
-          'http://localhost:5000/api/services'
+          'http://https://skilllink-w4n4.onrender.com/api/services'
         );
 
        const responseText = await response.text();
@@ -543,7 +543,7 @@ if (!response.ok) {
       setMessage('');
 
       const response = await fetch(
-        'http://localhost:5000/api/services',
+        'http://https://skilllink-w4n4.onrender.com/api/services',
         {
           method: 'POST',
           headers: {
@@ -584,7 +584,7 @@ if (!response.ok) {
       setRequestStatus('');
 
       const response = await fetch(
-        'http://localhost:5000/api/requests',
+        'http://https://skilllink-w4n4.onrender.com/api/requests',
         {
           method: 'POST',
           headers: {
@@ -629,7 +629,7 @@ if (!response.ok) {
 
         setSubmittingReview(requestId);
 
-        const response = await fetch('http://localhost:5000/api/reviews', {
+        const response = await fetch('http://https://skilllink-w4n4.onrender.com/api/reviews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -673,7 +673,7 @@ if (!response.ok) {
       setUpdatingRequest(requestId);
 
       const response = await fetch(
-        `http://localhost:5000/api/requests/${requestId}/status`,
+        `http://https://skilllink-w4n4.onrender.com/api/requests/${requestId}/status`,
         {
           method: 'PATCH',
           headers: {
